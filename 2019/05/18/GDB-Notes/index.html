@@ -96,16 +96,18 @@
 
 
 
-  <meta name="description" content="哇~金色传说">
-<meta property="og:type" content="website">
-<meta property="og:title" content="千寻一醉">
-<meta property="og:url" content="http://zhangyawei.top/index.html">
+  <meta name="description" content="工作中遇到的GDB调试常用流程及步骤，适用于阻塞，崩溃，多线程调试等。若是偶现的崩溃则需要设置生成dump文件。">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GDB_Notes">
+<meta property="og:url" content="http://zhangyawei.top/2019/05/18/GDB-Notes/index.html">
 <meta property="og:site_name" content="千寻一醉">
-<meta property="og:description" content="哇~金色传说">
+<meta property="og:description" content="工作中遇到的GDB调试常用流程及步骤，适用于阻塞，崩溃，多线程调试等。若是偶现的崩溃则需要设置生成dump文件。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-18T07:15:49.611Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="千寻一醉">
-<meta name="twitter:description" content="哇~金色传说">
+<meta name="twitter:title" content="GDB_Notes">
+<meta name="twitter:description" content="工作中遇到的GDB调试常用流程及步骤，适用于阻塞，崩溃，多线程调试等。若是偶现的崩溃则需要设置生成dump文件。">
 
 
 
@@ -113,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://zhangyawei.top/">
+  <link rel="canonical" href="http://zhangyawei.top/2019/05/18/GDB-Notes/">
 
 
 
@@ -123,7 +125,7 @@
   };
 </script>
 
-  <title>千寻一醉</title>
+  <title>GDB_Notes | 千寻一醉</title>
   
 
 
@@ -171,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,7 +215,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -334,354 +335,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhangyawei.top/2019/05/18/ffmpeg解码流程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang">
-      <meta itemprop="description" content="哇~金色传说">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558542480&di=28e167a51a7998f6c21466863a7b9ace&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fblog%2F201407%2F07%2F20140707192940_ySaz5.thumb.700_0.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千寻一醉">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/18/ffmpeg解码流程/" class="post-title-link" itemprop="url">ffmpeg解码流程图</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-18 16:03:58 / 修改时间：16:07:24" itemprop="dateCreated datePublished" datetime="2019-05-18T16:03:58+08:00">2019-05-18</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/VIDEO/" itemprop="url" rel="index"><span itemprop="name">VIDEO</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>ffmpeg解码流程核心方法调用的一张图片:</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/18/ffmpeg解码流程/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-	
-	<div>
-	
-	</div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhangyawei.top/2019/05/18/GPU-Decode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang">
-      <meta itemprop="description" content="哇~金色传说">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558542480&di=28e167a51a7998f6c21466863a7b9ace&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fblog%2F201407%2F07%2F20140707192940_ySaz5.thumb.700_0.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千寻一醉">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/18/GPU-Decode/" class="post-title-link" itemprop="url">GPU_Decode</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-18 15:21:53 / 修改时间：15:52:29" itemprop="dateCreated datePublished" datetime="2019-05-18T15:21:53+08:00">2019-05-18</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/VIDEO/" itemprop="url" rel="index"><span itemprop="name">VIDEO</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>硬解，是视频解码的一种方法，也是一种破解限制的方法，是指不依赖于CPU硬件资源，通过专用的设备（子卡）单独完成视频解码。</p>
-<p>硬解码和软解码，与CPU、GPU无关。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/18/GPU-Decode/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-	
-	<div>
-	
-	</div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -713,10 +369,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/18/GDB-Notes/" class="post-title-link" itemprop="url">GDB_Notes</a>
+          <h1 class="post-title" itemprop="name headline">GDB_Notes
+
               
             
           </h1>
@@ -798,18 +452,30 @@
       
 
       
-        
-          <p>工作中遇到的GDB调试常用流程及步骤，适用于阻塞，崩溃，多线程调试等。若是偶现的崩溃则需要设置生成dump文件。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/18/GDB-Notes/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <p>工作中遇到的GDB调试常用流程及步骤，适用于阻塞，崩溃，多线程调试等。若是偶现的崩溃则需要设置生成dump文件。</p>
+<a id="more"></a>
+<h3 id="进程名：ServiceA"><a href="#进程名：ServiceA" class="headerlink" title="进程名：ServiceA"></a>进程名：ServiceA</h3><h3 id="PID：2138"><a href="#PID：2138" class="headerlink" title="PID：2138"></a>PID：2138</h3><h3 id="1-确认GDB工具已经安装"><a href="#1-确认GDB工具已经安装" class="headerlink" title="1.确认GDB工具已经安装"></a>1.确认GDB工具已经安装</h3><h3 id="2-在gdb环境下运行服务："><a href="#2-在gdb环境下运行服务：" class="headerlink" title="2.在gdb环境下运行服务："></a>2.在gdb环境下运行服务：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ gdb ServiceA</span><br><span class="line">$ (gdb)attach 2138</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gdb -p 2138</span><br></pre></td></tr></table></figure>
+<h3 id="3-r命令，服务开始运行"><a href="#3-r命令，服务开始运行" class="headerlink" title="3.r命令，服务开始运行"></a>3.r命令，服务开始运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ (gdb)r</span><br></pre></td></tr></table></figure>
+<h3 id="4-设置断点：breakpoint"><a href="#4-设置断点：breakpoint" class="headerlink" title="4.设置断点：breakpoint"></a>4.设置断点：breakpoint</h3><p>查看断点信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ (gdb)info b</span><br></pre></td></tr></table></figure>
+<p>设置断点：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ (gdb)b 断点位置</span><br></pre></td></tr></table></figure>
+<h3 id="5-运行至断点停止时："><a href="#5-运行至断点停止时：" class="headerlink" title="5.运行至断点停止时："></a>5.运行至断点停止时：</h3><pre><code> 查看堆栈情况：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$（gdb）bt</span><br></pre></td></tr></table></figure>
+</code></pre><hr>
+<h3 id="查看线程信息："><a href="#查看线程信息：" class="headerlink" title="查看线程信息："></a>查看线程信息：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$（gdb）info thread</span><br></pre></td></tr></table></figure>
+<h3 id="通过线程PID查看某一线程具体堆栈："><a href="#通过线程PID查看某一线程具体堆栈：" class="headerlink" title="通过线程PID查看某一线程具体堆栈："></a>通过线程PID查看某一线程具体堆栈：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$（gdb）t PID</span><br></pre></td></tr></table></figure>
+<hr>
+<p>  查看反汇编代码： disas 函数名</p>
+<p>  查看寄存器值：i r（info registers）</p>
+<p>  核查有效地址 ：i proc m （info proc mappings）</p>
+<hr>
+<h3 id="在gdb中如何将所有线程的堆栈输出到文件中去"><a href="#在gdb中如何将所有线程的堆栈输出到文件中去" class="headerlink" title="在gdb中如何将所有线程的堆栈输出到文件中去"></a>在gdb中如何将所有线程的堆栈输出到文件中去</h3><h4 id="设置输出文件位置："><a href="#设置输出文件位置：" class="headerlink" title="设置输出文件位置："></a>设置输出文件位置：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(gdb) <span class="built_in">set</span> logging file /tmp/test.txt</span><br></pre></td></tr></table></figure>
+<h4 id="打开日志输出："><a href="#打开日志输出：" class="headerlink" title="打开日志输出："></a>打开日志输出：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(gdb) <span class="built_in">set</span> logging on</span><br></pre></td></tr></table></figure>
+<h4 id="拷贝所有线程堆栈至文件："><a href="#拷贝所有线程堆栈至文件：" class="headerlink" title="拷贝所有线程堆栈至文件："></a>拷贝所有线程堆栈至文件：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(gdb) thread apply all bt</span><br></pre></td></tr></table></figure>
+<h4 id="关闭日志输出："><a href="#关闭日志输出：" class="headerlink" title="关闭日志输出："></a>关闭日志输出：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(gdb) <span class="built_in">set</span> logging off</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -827,6 +493,12 @@
 	
 	<div>
 	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
 	</div>
 	
     
@@ -835,181 +507,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhangyawei.top/2019/05/15/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang">
-      <meta itemprop="description" content="哇~金色传说">
-      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558542480&di=28e167a51a7998f6c21466863a7b9ace&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fblog%2F201407%2F07%2F20140707192940_ySaz5.thumb.700_0.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千寻一醉">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-15 23:49:13" itemprop="dateCreated datePublished" datetime="2019-05-15T23:49:13+08:00">2019-05-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-18 15:14:02" itemprop="dateModified" datetime="2019-05-18T15:14:02+08:00">2019-05-18</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<p>(hexo默认md文档)</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/15/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/15/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-	
-	<div>
-	
-	</div>
-	
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/18/GPU-Decode/" rel="prev" title="GPU_Decode">
+                GPU_Decode <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1019,14 +550,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1046,8 +578,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1143,6 +684,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程名：ServiceA"><span class="nav-number">1.</span> <span class="nav-text">进程名：ServiceA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PID：2138"><span class="nav-number">2.</span> <span class="nav-text">PID：2138</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-确认GDB工具已经安装"><span class="nav-number">3.</span> <span class="nav-text">1.确认GDB工具已经安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在gdb环境下运行服务："><span class="nav-number">4.</span> <span class="nav-text">2.在gdb环境下运行服务：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-r命令，服务开始运行"><span class="nav-number">5.</span> <span class="nav-text">3.r命令，服务开始运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-设置断点：breakpoint"><span class="nav-number">6.</span> <span class="nav-text">4.设置断点：breakpoint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-运行至断点停止时："><span class="nav-number">7.</span> <span class="nav-text">5.运行至断点停止时：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看线程信息："><span class="nav-number">8.</span> <span class="nav-text">查看线程信息：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过线程PID查看某一线程具体堆栈："><span class="nav-number">9.</span> <span class="nav-text">通过线程PID查看某一线程具体堆栈：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在gdb中如何将所有线程的堆栈输出到文件中去"><span class="nav-number">10.</span> <span class="nav-text">在gdb中如何将所有线程的堆栈输出到文件中去</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置输出文件位置："><span class="nav-number">10.1.</span> <span class="nav-text">设置输出文件位置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打开日志输出："><span class="nav-number">10.2.</span> <span class="nav-text">打开日志输出：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拷贝所有线程堆栈至文件："><span class="nav-number">10.3.</span> <span class="nav-text">拷贝所有线程堆栈至文件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关闭日志输出："><span class="nav-number">10.4.</span> <span class="nav-text">关闭日志输出：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1288,6 +846,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1303,6 +865,8 @@
 
   
 
+
+  
 
 
   
